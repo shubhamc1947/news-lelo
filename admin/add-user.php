@@ -29,7 +29,8 @@ if(isset($_POST['save'])){
 		$sql1="insert into user (first_name,last_name,username,password,role)
 						VALUES ('{$fname}','{$lname}','{$user}','{$password}','{$role}')";
 			if(mysqli_query($conn,$sql1)){
-				header("location: {$hostname}/admin/users.php");
+                header("location: {$hostname}/admin/add-user.php");
+				//header("location: {$hostname}/admin/users.php");
 			}else{
 				$datainserterror="User DATA did not insert ";
 			}

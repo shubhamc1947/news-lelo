@@ -34,12 +34,36 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <ul class='menu'>
-                    <li><a href='category.php'>Business</a></li>
-                    <li><a href='category.php'>Entertainment</a></li>
-                    <li><a href='category.php'>Sports</a></li>
-                    <li><a href='category.php'>Politics</a></li>
-                </ul>
+                <?php 
+                    include('admin/config.php');
+                    if(isset($_GET['catid'])){
+                        $cid=$_GET['catid'];
+                    }
+                    $sql="select * from category where post>0";
+                    $res=mysqli_query($conn,$sql) or die("Query failded : category");
+                    if(mysqli_num_rows($res)>0){
+                        $active="";
+                ?>
+                    <ul class='menu'>
+                        <li><a href='index.php'>HOME</a></li>
+                
+                <?php
+                        while($row=mysqli_fetch_assoc($res)){
+                            if(isset($_GET['catid'])){
+                                if($cid==$row['category_id']){
+                                    $active="active";
+                                }else{
+                                    $active="";
+                                }
+                            }
+                ?>
+                            
+                            <li><a class="<?php echo $active;?>" href='category.php?catid=<?php echo $row['category_id']?>'><?php echo $row['category_name']?></a></li>
+                <?php
+                        }
+                    }
+                ?>
+                    </ul>
             </div>
         </div>
     </div>

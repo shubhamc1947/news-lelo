@@ -13,7 +13,7 @@ if(isset($_POST['save'])){
                     VALUES('{$cat}')";
     $result=mysqli_query($conn,$sql) or die("did not inserted DATA");
    
-    header("location: {$hostname}/admin/ category.php");
+    header("location: {$hostname}/admin/category.php");
 }
 
 
