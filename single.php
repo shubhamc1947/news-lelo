@@ -7,7 +7,7 @@
                   <?php 
                     // include('admin/config.php');
                     $id=$_GET['id'];
-                    $sql="SELECT post.post_id,post.description,post_img,post.title,post.category,category_name,post.post_date,user.first_name,user.last_name,user.username from post 
+                    $sql="SELECT post.post_id,post.description,post_img,post.title,post.category,category_name,post.post_date,post.author,user.first_name,user.last_name,user.username from post 
                     LEFT JOIN category ON post.category=category.category_id
                     LEFT JOIN user ON post.author = user.user_id WHERE post.post_id={$id}
                     order by post_id desc ";
@@ -26,7 +26,7 @@
                                     </span>
                                     <span>
                                         <i class="fa fa-user" aria-hidden="true"></i>
-                                        <a href='author.php'><?php echo $row['first_name']." ".$row['last_name']; ?></a>
+                                        <a href="author.php?authorid=<?php echo $row['author'];?>"><?php echo $row['first_name']." ".$row['last_name']; ?></a>
                                     </span>
                                     <span>
                                         <i class="fa fa-calendar" aria-hidden="true"></i>

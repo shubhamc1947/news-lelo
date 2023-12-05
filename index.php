@@ -1,4 +1,6 @@
-<?php include 'header.php'; ?>
+<?php 
+
+include 'header.php'; ?>
     <div id="main-content">
         <div class="container">
             <div class="row">
@@ -17,7 +19,7 @@
                             }
                             $offset=($page-1)*$data_one_page;
 
-                            $sql="select post.post_id,post.description,post_img,post.title,post.category,category_name,post.post_date,user.first_name,user.last_name,user.username from post 
+                            $sql="select post.post_id,post.description,post_img,post.title,post.category,category_name,post.post_date,post.author,user.first_name,user.last_name,user.username from post 
                             left join category on post.category=category.category_id
                             left join user on post.author = user.user_id
                             order by post_id desc LIMIT {$offset},{$data_one_page}";
@@ -40,7 +42,7 @@
                                             </span>
                                             <span>
                                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                                <a href='author.php'><?php echo $row['first_name']." ".$row['last_name']; ?></a>
+                                                <a href="author.php?authorid=<?php echo $row['author'];?>"><?php echo $row['first_name']." ".$row['last_name']; ?></a>
                                             </span>
                                             <span>
                                                 <i class="fa fa-calendar" aria-hidden="true"></i>

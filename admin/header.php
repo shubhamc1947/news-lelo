@@ -5,6 +5,10 @@ if(!isset($_SESSION["username"])){
     header("location: {$hostname}/admin/");
 }
 
+$sqlsettings="select * from settings";
+$ressettings=mysqli_query($conn,$sqlsettings) or die("did not get the settings value");
+$rowsettings=mysqli_fetch_assoc($ressettings);
+
 
 ?>
 <!DOCTYPE html>
@@ -31,7 +35,7 @@ if(!isset($_SESSION["username"])){
                 <div class="row">
                     <!-- LOGO -->
                     <div class="col-md-2">
-                        <a href="post.php"><img class="logo" src="images/news.jpg"></a>
+                        <a href="post.php"><img class="logo" src="<?php echo $rowsettings['logo']?>"></a>
                     </div>
                     <!-- /LOGO -->
                       <!-- LOGO-Out -->
@@ -63,6 +67,9 @@ if(!isset($_SESSION["username"])){
                             </li>
                             <li>
                                 <a href="users.php">Users</a>
+                            </li>
+                            <li>
+                                <a href="settings.php">Settings</a>
                             </li>
                             <?php 
                                 

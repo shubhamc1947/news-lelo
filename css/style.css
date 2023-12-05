@@ -39,8 +39,8 @@ h2.page-heading{
 }
 
 img.logo{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 80px;
     display: block;
 }
 
@@ -194,7 +194,8 @@ form{
 }
 
 #logo img{
-    width: 100%;
+    width: auto;
+    height: 70px;
 }
 
 /* Menubar Styling */

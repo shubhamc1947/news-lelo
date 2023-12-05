@@ -10,15 +10,19 @@
         $password = mysqli_real_escape_string($conn,md5($_POST["password"]));
 
         
-        $sql="select user_id,username,role from user where username='{$username}' AND password='{$password}'";
+        echo $sql="select user_id,username,role from user where username='{$username}' AND password='{$password}'";
         $result = mysqli_query($conn, $sql) or die("Did not run ");
         if(mysqli_num_rows($result)> 0){
             while($row = mysqli_fetch_assoc($result)){
-                $_SESSION['username'] = $row['username'];
-                $_SESSION['userid'] = $row['user_id'];
-                $_SESSION['role'] = $row['role'];
-                //session unique id
-                $_SESSION['session_id']=bin2hex(random_bytes(10));
+                echo $_SESSION['username'] = $row['username'];
+                echo "<br>";
+                echo $_SESSION['userid'] = $row['user_id'];
+                echo "<br>";
+                echo $_SESSION['role'] = $row['role'];
+                echo "<br>";
+         
+                 //session unique id
+                echo $_SESSION['session_id']=bin2hex(random_bytes(10));
                 
                 $sessionSql="insert into session(session_id,user_name,userid,role,st_time)
                                             values('".$_SESSION['session_id']."',

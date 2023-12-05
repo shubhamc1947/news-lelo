@@ -6,9 +6,9 @@ if(isset($_SESSION['role'])){
     }
 }
 
-$hostname="http://localhost/workspace/news-Lelo";
+$hostname="http://localhost/Learning_Backend/news-Lelo";
 
-$conn=mysqli_connect("localhost","root","","news_lelo") or die("DATABASE did not connect ". mysqli_connect_error());
+$conn=mysqli_connect("localhost","root","mysql","news_lelo") or die("DATABASE did not connect ". mysqli_connect_error());
 
 
 // session Code here
