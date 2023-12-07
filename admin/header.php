@@ -27,29 +27,39 @@ $rowsettings=mysqli_fetch_assoc($ressettings);
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
+    <header style="margin-bottom:90px;">
+        <nav>
+            <div class="brand-info">
+                <a href="index.php" id="logo_head"><img  src="<?php echo $rowsettings['logo']?>"> NEWS LELO</a>
+            </div>
+            <div class="nav-info">
+                 <a href="logout.php" class="admin-logout" >Hello ! <?php echo $_SESSION['username'];?> logout</a>
+            </div>
+        </nav>
+    </header>
         <!-- HEADER -->
-        <div id="header-admin">
-            <!-- container -->
+        <!-- <div id="header-admin">
+            container
             <div class="container">
-                <!-- row -->
+                row
                 <div class="row">
-                    <!-- LOGO -->
+                    LOGO
                     <div class="col-md-2">
-                        <a href="post.php"><img class="logo" src="<?php echo $rowsettings['logo']?>"></a>
+                        <a href="post.php"><img class="logo" src="<?php //echo $rowsettings['logo']?>"></a>
                     </div>
-                    <!-- /LOGO -->
-                      <!-- LOGO-Out -->
+                    /LOGO
+                      LOGO-Out
                     <div class="col-md-offset-9  col-md-3">
 
-                        <a href="logout.php" class="admin-logout" >Hello ! <?php echo $_SESSION['username'];?> logout</a>
+                        <a href="logout.php" class="admin-logout" >Hello ! <?php //echo $_SESSION['username'];?> logout</a>
                     </div>
-                    <!-- /LOGO-Out -->
+                    /LOGO-Out
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- /HEADER -->
         <!-- Menu Bar -->
-        <div id="admin-menubar">
+        <div id="admin-menubar" style="margin-top:70px;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -67,6 +77,9 @@ $rowsettings=mysqli_fetch_assoc($ressettings);
                             </li>
                             <li>
                                 <a href="users.php">Users</a>
+                            </li>
+                            <li>
+                                <a href="authorrequest.php">Author Request</a>
                             </li>
                             <li>
                                 <a href="settings.php">Settings</a>

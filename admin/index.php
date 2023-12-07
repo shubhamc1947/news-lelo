@@ -37,6 +37,11 @@
         }
     }
 
+    
+$sqlsettings="select * from settings";
+$ressettings=mysqli_query($conn,$sqlsettings) or die("did not get the settings value");
+$rowsettings=mysqli_fetch_assoc($ressettings);
+
 ?>
 
 
@@ -57,7 +62,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-offset-4 col-md-4">
-                        <img class="logo" src="images/news.jpg">
+                        <div style="display:flex; justify-content:center;"><img  src="<?php echo $rowsettings['logo']?>" width="" height="70px" style=""></div>
                         <h3 class="heading">Admin</h3>
                         <!-- Form Start -->
                         <form  action="" method ="POST">
@@ -69,7 +74,7 @@
                                 <label>Password</label>
                                 <input type="password" name="password" class="form-control" placeholder="" required>
                             </div>
-                            <input type="submit" name="login" class="btn btn-primary" value="login" />
+                            <input type="submit" name="login"  class="btn" style="background-color:#637E76;color:#f2f2f2;width:100%" value="login" />
                         </form>
                         <!-- /Form  End -->
                     </div>

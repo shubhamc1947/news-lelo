@@ -1,25 +1,56 @@
-/* ===================== */
-/* COMMOM CSS */
 body{
-    background: #f1f1f1;
+    background: #e4dddd;
     font-family: sans-serif,arial,Helvetica;
+    --primary-color:#637E76;
 }
 
-a,
-a:hover,
-a:focus{
-    text-decoration: none;
-    outline: none;
+
+/* index page css */
+header{
+    background-color: var(--primary-color);
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:3;
+    height: 70px;
 }
-.btn:focus,
-button:focus{
-    outline: none;
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin:0 2rem;
+    align-items: center;
+    padding:0.5rem 0;
+    
 }
 
-ul{
-    margin:0;
-    padding:0;
-    list-style:none;
+#logo_head{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:#333;
+    margin-left:1rem;
+}
+#logo_head>img{
+    height: 50px;
+    margin-right:1rem;
+}
+#logo_head>span{
+    
+}
+.nav-info{
+    font-size:1.5rem;
+    display: flex;
+    gap:1rem;
+    /* font-we  ight: bold; */
+    /* color:#333!important; */
+}
+.nav-info>a{
+    color:#f2f2f2;
+    
+}
+.nav-info>a:hover{
+    color:#333;
+    text-decoration: underline;
 }
 
 h2.page-heading{
@@ -28,6 +59,18 @@ h2.page-heading{
   border-bottom: 2px solid #333;
 }
 
+
+
+/* become author page header set */
+#become-author{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color:#f2f2f2;
+    font-size:2rem;
+}
 /* ===================== */
 
 /* ===================== */
@@ -45,7 +88,7 @@ img.logo{
 }
 
 #header-admin{
-    background-color: #1E90FF;
+    background-color: var(--primary-color);
     padding: 15px 0;
 }
 
@@ -73,7 +116,7 @@ img.logo{
     margin: 0 5px 0 0;
 }
 #admin-menubar .admin-menu li a{
-    color: #1E90FF;
+    color: var(--primary-color);
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
@@ -84,7 +127,7 @@ img.logo{
 
 #admin-menubar .admin-menu li a:hover{
     color: #fff;
-    background-color: #1E90FF;
+    background-color: var(--primary-color);
 }
 
 #admin-content{
@@ -99,7 +142,7 @@ img.logo{
 
 #admin-content .add-new{
     color: #fff;
-    background-color: #1E90FF;
+    background-color: var(--primary-color);
     font-size: 15px;
     font-weight: 600;
     text-align: center;
@@ -183,7 +226,7 @@ form{
 
 /* Header Styling */
 #header{
-    background: #1e90ff;
+    background: var(--primary-color);
     text-align: center;
     padding: 15px;
 }
@@ -200,6 +243,7 @@ form{
 
 /* Menubar Styling */
 #menu-bar{
+    margin-top:60px;
     background: #333;
     text-align: center;
 }
@@ -221,7 +265,7 @@ form{
 #menu-bar .menu > li > a:hover,
 #menu-bar .menu > li > a.active{
     color:#fff;
-    background:#1e90ff;
+    background:var(--primary-color);
 }
 
 /* Main Content Styling */
@@ -254,7 +298,7 @@ form{
   transition: border .3s;
 }
 #main-content .post-content .post-img:hover{
-  border: 3px solid #1e90ff;
+  border: 3px solid var(--primary-color);
 }
 #main-content .post-content .inner-content{
     /* border: 1px solid #000; */
@@ -268,7 +312,7 @@ form{
 
 }
 #main-content .post-content h3 a{
-    color: #1e90ff;
+    color: var(--primary-color);
     transition:all 0.3s;
 }
 #main-content .post-content h3 a:hover{
@@ -284,7 +328,7 @@ form{
 }
 
 #main-content .post-content .post-information i{
-    color: #1e90ff;
+    color: var(--primary-color);
     margin-right: 1px;
 }
 
@@ -308,7 +352,7 @@ form{
 
 #main-content .post-content a.read-more{
     color: #fff;
-    background-color: #1E90FF;
+    background-color: var(--primary-color);
     font-size: 12px;
     text-transform: capitalize;
     padding: 3px 8px;
@@ -328,7 +372,7 @@ form{
 }
 
 #main-content .single-post h3{
-    color: #1e90ff;
+    color: var(--primary-color);
 }
 
 #main-content .single-post .post-information{
@@ -359,7 +403,7 @@ form{
 
 .pagination li a{
     border: none;
-    background: #1e90ff;
+    background: var(--primary-color);
     color: #fff;
 }
 
@@ -402,7 +446,7 @@ i.fa{
     text-transform: uppercase;
     padding: 0 0 0 5px;
     margin: 0 0 21px;
-    border-left: 3px solid #1e90ff;
+    border-left: 3px solid var(--primary-color);
 }
 
 #sidebar .search-box-container{
@@ -427,8 +471,8 @@ i.fa{
     font-weight: 600;
     text-transform: uppercase;
     padding: 6px 8px;
-    background-color: #1E90FF;
-    border-color: #1E90FF;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
     outline: none;
 }
 
@@ -471,7 +515,7 @@ i.fa{
 }
 
 #sidebar .recent-post .post-img:hover{
-  border: 3px solid #1e90ff;
+  border: 3px solid var(--primary-color);
 }
 
 #sidebar .recent-post .post-img img{
@@ -492,7 +536,7 @@ i.fa{
     margin: 0 0 5px;
 }
 #sidebar .recent-post h5 a{
-    color: #1E90FF;
+    color: var(--primary-color);
 }
 
 #sidebar .recent-post span{
@@ -506,7 +550,7 @@ i.fa{
     color: #666;
 }
 #sidebar .recent-post span i{
-    color: #1E90FF;
+    color: var(--primary-color);
 }
 
 #sidebar .recent-post a.read-more{
@@ -529,7 +573,7 @@ i.fa{
     color: #fff;
     padding:15px 0;
     text-align:center;
-    background-color:#1e90ff;
+    background-color:var(--primary-color);
 }
 
 #footer  a{
@@ -540,6 +584,22 @@ i.fa{
     text-decoration: underline;
 }
 
-/* ===================== */
-/* FrontEnd CSS END */
-/* ===================== */
+/* utilities css */
+
+
+a,
+a:hover,
+a:focus{
+    text-decoration: none;
+    outline: none;
+}
+.btn:focus,
+button:focus{
+    outline: none;
+}
+
+ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}

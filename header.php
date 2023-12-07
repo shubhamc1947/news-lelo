@@ -1,10 +1,7 @@
 <?php
 include('admin/config.php');
-// echo "<pre>";
-// print_r($_SERVER);
-// echo "</pre>";
-// echo $_SERVER['PHP_SELF'];
 
+//dynamic title bar code
 $titlename=basename($_SERVER['PHP_SELF']);
 $title="";
 
@@ -28,7 +25,6 @@ switch($titlename){
         }else{
             $title="NO record found";
         }
-        // $title="Author Page";
         break;
     case "single.php":
         if(isset($_GET['id'])){
@@ -39,8 +35,6 @@ switch($titlename){
         }else{
             $title="NO record found";
         }
-        // $title="Author Page";
-        // $title="Single Page";
         break;
     case "search.php":
         if(isset($_GET['searchterm'])){
@@ -81,19 +75,30 @@ $rowsettings=mysqli_fetch_assoc($ressettings);
 </head>
 <body>
 <!-- HEADER -->
-<div id="header">
-    <!-- container -->
+<header>
+<nav>
+    <div class="brand-info">
+        <a href="index.php" id="logo_head"><img src="admin/<?php echo $rowsettings['logo']?>"> <span>NEWS LELO</span></a>
+    </div>
+    <div class="nav-info">
+       
+        <a href="becomeauthor.php">Become an Author</a>
+    </div>
+</nav>
+</header>
+<!-- <div id="header">
+    
     <div class="container">
-        <!-- row -->
+       
         <div class="row">
-            <!-- LOGO -->
+         
             <div class=" col-md-offset-4 col-md-4">
-                <a href="index.php" id="logo"><img src="admin/<?php echo $rowsettings['logo']?>"></a>
+                <a href="index.php" id="logo"><img src="admin/<?php //echo $rowsettings['logo']?>"></a>
             </div>
-            <!-- /LOGO -->
+            
         </div>
     </div>
-</div>
+</div> -->
 <!-- /HEADER -->
 <!-- Menu Bar -->
 <div id="menu-bar">

@@ -1,6 +1,6 @@
 <?php 
-
-include 'header.php'; ?>
+    include 'header.php'; 
+?>
     <div id="main-content">
         <div class="container">
             <div class="row">
@@ -90,13 +90,7 @@ include 'header.php'; ?>
                             ?>
                       
                         </ul>
-                        
-                        <!-- <ul class='pagination'>
-                            <li class="active"><a href="">1</a></li>
-                            <li><a href="">2</a></li>
-                            <li><a href="">3</a></li>
-                        </ul> -->
-                    </div><!-- /post-container -->
+                    </div>
                 </div>
                 <?php include 'sidebar.php'; ?>
             </div>
