@@ -1,8 +1,8 @@
 <?php 
 include "header.php"; 
-echo "<pre>";
-print_r($_SESSION);
-echo "</pre>";
+// echo "<pre>";
+// print_r($_SESSION);
+// echo "</pre>";
 $data_one_page=4;
 if(isset($_GET["pageno"])){
     $page=$_GET["pageno"];
