@@ -25,6 +25,9 @@ $rowsettings=mysqli_fetch_assoc($ressettings);
         <link rel="stylesheet" href="../css/font-awesome.css">
         <!-- Custom stlylesheet -->
         <link rel="stylesheet" href="../css/style.css">
+        <!-- sweet alert css and js -->
+        <script src="../js/sweetAlert.js"></script>
+        <link rel="stylesheet" href="../css/sweetAlert.css">
     </head>
     <body>
     <header style="margin-bottom:90px;">

@@ -86,19 +86,6 @@ $rowsettings=mysqli_fetch_assoc($ressettings);
     </div>
 </nav>
 </header>
-<!-- <div id="header">
-    
-    <div class="container">
-       
-        <div class="row">
-         
-            <div class=" col-md-offset-4 col-md-4">
-                <a href="index.php" id="logo"><img src="admin/<?php //echo $rowsettings['logo']?>"></a>
-            </div>
-            
-        </div>
-    </div>
-</div> -->
 <!-- /HEADER -->
 <!-- Menu Bar -->
 <div id="menu-bar">

@@ -4,7 +4,7 @@ include "header.php";
 if(isset($_SESSION['role'])){
 
     if($_SESSION['role']=='0'){
-        header("location: {$hostname}/admin/post.php");
+        header("location: {$hostname}/admin/index.php");
     }
 }
 
@@ -61,8 +61,8 @@ $per_page_data=5;
 
 //$page shows kon sa page hai
 
-if(isset($_GET["page"])){
-    $page=$_GET["page"];
+if(isset($_GET["pageno"])){
+    $page=$_GET["pageno"];
 }else{
     $page=1;
 }
@@ -129,6 +129,36 @@ $result=mysqli_query($conn,$sql) or die("Data did not fetch");
 				  ?>
                   
               </div>
+          </div>
+          <div class="row">
+          <ul class='pagination admin-pagination'>
+                  <?php 
+                  $sql1= 'SELECT * FROM requestforauthor WHERE accepted="0"';
+                  $result1=mysqli_query($conn,$sql1);
+                    $totel_row= mysqli_num_rows($result1);
+                    
+                    $totel_pages=ceil($totel_row/$per_page_data);
+                    if($page>1){
+                        ?>
+                        <li><a href='authorrequest.php?pageno=<?php echo $page-1;?>'>PREV</a></li>
+                        <?php
+                    }
+                    for($i=1;$i<=$totel_pages;$i++){
+                        ?>
+                            <li class="<?php echo $page==$i?"active":""; ?>"><a  href="authorrequest.php?pageno=<?php echo $i;?>"><?php echo $i ;?></a></li>
+                        <?php
+                    }
+                    if($totel_pages>$page){
+                        ?>
+                        <li><a href='authorrequest.php?pageno=<?php echo $page+1;;?>'>NEXT</a></li>
+                        <?php
+                    }
+                  
+                  ?>
+                      <!-- <li class="active"><a>1</a></li>
+                      
+                      <li><a>3</a></li> -->
+                </ul>
           </div>
       </div>
   </div>
