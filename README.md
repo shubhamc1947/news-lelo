@@ -1,6 +1,10 @@
 # Newslelo
 
-Watch Live Demo https://drive.google.com/file/d/1XICoWmUZU8ELqivKby9BoGxd5-t-G76I/view?usp=sharing
+
+https://github.com/user-attachments/assets/fe4d3a58-0323-4f3c-b10e-e5177ae8dc61
+
+
+
 
 Newslelo is a dynamic news platform where users can apply to become authors, log in to write news, and manage posts. Admins have full control over authors, posts, and categories through a dynamic admin panel.
 
